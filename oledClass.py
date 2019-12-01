@@ -1,9 +1,12 @@
 from PIL import Image,ImageDraw,ImageFont
 from devi2c import I2C
+
 # Reference
-# 1. i2cdev     https://github.com/cbeytas/i2cdev
-# 2. i2C on rpi https://stackoverflow.com/questions/41376518/i2c-communication-in-raspberry-pi-using-python
-# 3. SSD1306    http://shihhsiung.blogspot.com/2018/11/i2c-ssd1306-096-oled.html
+# 1. i2cdev        https://github.com/cbeytas/i2cdev
+# 2. i2C on rpi    https://stackoverflow.com/questions/41376518/i2c-communication-in-raspberry-pi-using-python
+# 3. SSD1306       http://shihhsiung.blogspot.com/2018/11/i2c-ssd1306-096-oled.html
+# 4. scim-chewing  http://yhhuang1966.blogspot.com/2017/10/scim-chewing.html
+# 5. font download http://wordpress.bestdaylong.com/blog/archives/16103
 
 # SSD1306 class
 class SSD1306:

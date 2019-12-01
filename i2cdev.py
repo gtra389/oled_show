@@ -83,16 +83,18 @@ class I2C:
         name = Name of device from /sys/class/i2c-dev/"device"/name.
         addr = Slave address (set manually or with set_addr() method).
     """
-    def __init__(self, bus=None):
+    def __init__(self, addr=None, bus=None):
         '''Initialize object. If 'bus' is specified, tries to open the
         respective "/dev/i2c-X" file. May raise IOError on failure.'''
         # Initialize attributes
         self.device = ""
-        self.name = ""
-        self.addr = None
+        self.name = ""        
         self._dev = None
         if bus is not None:
             self.open(bus)
+
+        if addr is not None:
+            self.set_addr(addr)
 
     def open(self, bus):
         '''Attempts to open the given i2c bus number (/dev/i2c-X).
@@ -295,7 +297,7 @@ class I2C:
 #end class I2C
 
 
-
+'''
 # ----------------------------------------------------------------------
 # Sample program if module is run as __main__
 # ----------------------------------------------------------------------
@@ -351,5 +353,5 @@ if __name__ == "__main__":
             print("%d0: %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s " %
                   tuple([row]+["%02X" % addr if addr in found else "--"
                                for addr in range(row*16, row*16+16)]))
-            
+'''          
    
