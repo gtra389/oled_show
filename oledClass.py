@@ -1,5 +1,5 @@
 from PIL import Image,ImageDraw,ImageFont
-from devi2c import I2C
+from i2cdev import I2C
 
 # Reference
 # 1. i2cdev        https://github.com/cbeytas/i2cdev
